@@ -5,31 +5,31 @@ import 'react-toastify/dist/ReactToastify.css';
 
 function AddTurest() {
   const notify = () => toast(" Data Add Sucssesfully ");
-const handleSubmit=(e)=>{
-  e.preventDefault();
-  const url=e.target.url.value;
-  const tourists_spot_name=e.target.tourists_spot_name.value;
-  const country_Name=e.target.country_Name.value;
-  const location=e.target.location.value;
-  const description=e.target.description.value;
-  const average_cost=e.target.average_cost.value;
-  const seasonality=e.target.seasonality.value;
-  const travel_time=e.target.travel_time.value;
-  const totaVisitorsPerYear=e.target.totaVisitorsPerYear.value;
-  const useremail=e.target.useremail.value;
-  const username=e.target.username.value;
-  // const AddData={  url: url,
-  //   tourists_spot_name:tourists_spot_name,
-  //   country_Name:country_Name,
-  //   location:location,
-  //   description:description,
-  //   average_cost:average_cost,
-  //   seasonality:seasonality,
-  //   travel_time:travel_time,
-  //    totaVisitorsPerYear:totaVisitorsPerYear,
-  //   useremail: useremail,
-  //   username:username}
-    fetch('https://new-server-sigma.vercel.app/insert',{
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const url = e.target.url.value;
+    const tourists_spot_name = e.target.tourists_spot_name.value;
+    const country_Name = e.target.country_Name.value;
+    const location = e.target.location.value;
+    const description = e.target.description.value;
+    const average_cost = e.target.average_cost.value;
+    const seasonality = e.target.seasonality.value;
+    const travel_time = e.target.travel_time.value;
+    const totaVisitorsPerYear = e.target.totaVisitorsPerYear.value;
+    const useremail = e.target.useremail.value;
+    const username = e.target.username.value;
+    // const AddData={  url: url,
+    //   tourists_spot_name:tourists_spot_name,
+    //   country_Name:country_Name,
+    //   location:location,
+    //   description:description,
+    //   average_cost:average_cost,
+    //   seasonality:seasonality,
+    //   travel_time:travel_time,
+    //    totaVisitorsPerYear:totaVisitorsPerYear,
+    //   useremail: useremail,
+    //   username:username}
+    fetch('https://new-server-sigma.vercel.app/insert', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -38,27 +38,27 @@ const handleSubmit=(e)=>{
         users:
         {
           url,
-tourists_spot_name,
- country_Name,
-   location,
- description,
-   average_cost,
-  seasonality,
-  travel_time,
-  totaVisitorsPerYear,
- useremail,
- username,
+          tourists_spot_name,
+          country_Name,
+          location,
+          description,
+          average_cost,
+          seasonality,
+          travel_time,
+          totaVisitorsPerYear,
+          useremail,
+          username,
         }
+      })
     })
-  })
 
     notify()
-     
-}
+
+  }
 
   return (
     <div >
-    
+
       <div className="hero min-h-screen bg-base-200 ">
         <div className="hero-content flex-col lg:flex-row-reverse">
           <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
