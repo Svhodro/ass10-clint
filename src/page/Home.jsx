@@ -73,7 +73,7 @@ function Home() {
       <div className="flex justify-center flex-wrap w-full">
         <div className='flex justify-center text-2xl font-bold text-green-600 my-4 '>
           <p >Tourist-Sport</p>
-        </div>
+        </div>        
         <HomeCard />
       </div>
       <p className="text-2xl text-center font-bold text-green-600 my-6">Contry Section</p>

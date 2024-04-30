@@ -50,7 +50,7 @@ function Mylist() {
   return (
 
     <>
-
+        
       <div className="overflow-x-auto">
         <table className="table">
           {/* head */}

@@ -4,34 +4,55 @@ import { useNavigate } from 'react-router-dom'
 
 function AllCardTourist() {
     const [data, setData] = useState([])
-    const {tourist,setTourist}=useContext(UserContext)
-    const navigate=useNavigate()
+    const [isLoading, setLoading] = useState(true)
+    const [hidden, setHidden] = useState('hidden')
+    const { tourist, setTourist } = useContext(UserContext)
+    const navigate = useNavigate()
+    
     useEffect(() => {
+        
         fetch("https://new-server-sigma.vercel.app/Get")
             .then(responce => responce.json())
             .then(user => {
                 setData(user)
-                setTourist(user);                
+                setTourist(user);
+                setLoading(false)
             })
-             
+      
 
     }, [])
-    
+
+    useEffect(()=>{
+        if(isLoading==false){
+          setHidden("hidden")
+        }else{
+          setHidden("block")
+        }
+  },[isLoading])
     return (
-        <div className='flex flex-wrap gap-3 justify-center'>
+
+        <div className='flex flex-wrap gap-3 justify-center h'>
+            {/* loader */}
+            <div className="flex justify-center w-full h-full items-center">
+                <span className={"loading loading-spinner loading-lg "+hidden}></span>
+            </div>
+            
+
+
+
             <div className='flex justify-end p-4 w-full h-20 '>
                 <div className="dropdown dropdown-end">
                     <div tabIndex={0} role="button" className="btn m-1">Sort</div>
                     <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
-                        <li>Ascending</li>                        
+                        <li>Ascending</li>
                     </ul>
                 </div>
             </div>
             {data.map((res) => {
-                 const handleclick=()=>{
+                const handleclick = () => {
                     setTourist(res)
                     navigate('/private/details')
-                 }
+                }
                 return <div className="card w-96 bg-base-100 shadow-xl">
                     <figure className="px-10 pt-10">
                         <img src={res.image} />

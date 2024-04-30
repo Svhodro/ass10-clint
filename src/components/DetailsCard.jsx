@@ -2,41 +2,11 @@ import React, { useContext } from 'react'
 import UserContext from '../Context/Usercontext'
 
 function DetailsCard() {
-    
-// UserEmail
-// : 
-// "rudrolipi@gmail.com"
-// UserName
-// : 
-// "sporsho"
-// average_cost
-// : 
-// 2000
-// country_Name
-// : 
-// "bangladesh"
-// image
-// : 
-// "https://wallpapercave.com/wp/wp9587310.jpg"
-// location
-// : 
-// "Khulna,sundorbon "
-// seasonality
-// : 
-// "sammer"
-// shortdescription
-// : 
-// "The Sundarbans is a UNESCO World Heritage Site located in Bangladesh, known for its unique mangrove forests and diverse wildlife. This vast area is home to the Bengal tiger, as well as various species of birds, reptiles, and marine life. Visitors can explore the dense mangrove forests by boat, witnessing the beauty of this natural ecosystem and the intricate network of waterways. The Sundarbans is not only a haven for wildlife enthusiasts but also a place of cultural significance, with local communities living in harmony with the environment. It is a must-visit destination for those seeking a truly immersive and unforgettable experience in Bangladesh."
-// totaVisitorsPerYear
-// : 
-// "19.8 million"
-// tourists_spot_name
-// : 
-// "sundarban"
-// travel_time
-// :
+   
     const {tourist}=useContext(UserContext)
-    console.log(tourist)
+
+
+   
     return (
         <div className='p-10  font-bold text-wrap '>
            
