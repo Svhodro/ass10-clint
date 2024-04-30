@@ -8,9 +8,10 @@ const UserContextProvider=({children})=>{
     const [userDetails,setuserDetails]=useState({username:'',url:'',email:''})
     const [Contry,setContry]=useState()
     const [tourist,setTourist]=useState()
+    const [contryid,setcontryid]=useState()
    
     return(
-        <Usercontext.Provider value={{id,setId,user,setuser,userDetails,setuserDetails,reg,setreg,Contry,setContry,tourist,setTourist}}>
+        <Usercontext.Provider value={{id,setId,user,setuser,userDetails,setuserDetails,reg,setreg,Contry,setContry,tourist,setTourist,contryid,setcontryid}}>
            {children}
         </Usercontext.Provider>
     )

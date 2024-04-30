@@ -7,7 +7,7 @@ function HomeCard() {
     const [data, setData] = useState([])
     const navigate=useNavigate()
     useEffect(() => {
-        fetch("http://localhost:3000/touristData")
+        fetch("http://localhost:3000/Get")
             .then(responce => responce.json())
             .then(user => setData(user))
 

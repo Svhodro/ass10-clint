@@ -1,10 +1,11 @@
+import axios from 'axios';
 import React from 'react'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 function AddTurest() {
   const notify = () => toast(" Data Add Sucssesfully ");
-const handleSubmit=async(e)=>{
+const handleSubmit=(e)=>{
   e.preventDefault();
   const url=e.target.url.value;
   const tourists_spot_name=e.target.tourists_spot_name.value;
@@ -28,28 +29,28 @@ const handleSubmit=async(e)=>{
   //    totaVisitorsPerYear:totaVisitorsPerYear,
   //   useremail: useremail,
   //   username:username}
-    await fetch('http://localhost:3000/AddData', {
+    fetch('http://localhost:3000/insert',{
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({
-        users: 
-          { url: url,
-            tourists_spot_name:tourists_spot_name,
-            country_Name:country_Name,
-            location:location,
-            description:description,
-            average_cost:average_cost,
-            seasonality:seasonality,
-            travel_time:travel_time,
-             totaVisitorsPerYear:totaVisitorsPerYear,
-            useremail: useremail,
-            username:username
-          }         
-        
-      })
+        users:
+        {
+          url,
+tourists_spot_name,
+ country_Name,
+   location,
+ description,
+   average_cost,
+  seasonality,
+  travel_time,
+  totaVisitorsPerYear,
+ useremail,
+ username,
+        }
     })
+  })
 
     notify()
      

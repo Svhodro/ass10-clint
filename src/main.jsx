@@ -15,6 +15,8 @@ import Nopage from './page/Nopage.jsx'
 import UserContextProvider from './Context/UserContextProvider.jsx'
 import Term from './page/Term.jsx'
 import Country from './page/Country.jsx'
+import Contrydetails from './page/Contrydetails.jsx'
+
 const router=createBrowserRouter(
   createRoutesFromElements(
       
@@ -26,6 +28,7 @@ const router=createBrowserRouter(
             <Route path='details' element={<Details/>}/>
             <Route path='mylist' element={<Mylist/>}/>            
             <Route path='contry' element={<Country/>}/>
+            <Route path='contrydetails' element={<Contrydetails/>}/>
           </Route>   
           <Route path='/login' element={<Login/>}/>
           <Route path='/register' element={<Register/>}/>
@@ -34,7 +37,7 @@ const router=createBrowserRouter(
           <Route path='*' element={<Nopage/>}/>
           
       </Route>
-  
+ 
       
   )
 )

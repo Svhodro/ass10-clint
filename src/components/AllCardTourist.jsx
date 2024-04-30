@@ -7,12 +7,16 @@ function AllCardTourist() {
     const {tourist,setTourist}=useContext(UserContext)
     const navigate=useNavigate()
     useEffect(() => {
-        fetch("http://localhost:3000/touristData")
+        fetch("http://localhost:3000/Get")
             .then(responce => responce.json())
-            .then(user => setData(user))
-
+            .then(user => {
+                setData(user)
+                setTourist(user);                
+            })
+             
 
     }, [])
+    
     return (
         <div className='flex flex-wrap gap-3 justify-center'>
             <div className='flex justify-end p-4 w-full h-20 '>

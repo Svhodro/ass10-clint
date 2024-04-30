@@ -5,17 +5,16 @@ import UserContext from '../Context/Usercontext'
 function ContryCard() {
     const navigate = useNavigate()
     const [data, setData] = useState([])
-    const {setContry}=useContext(UserContext)
-    
+    const { setContry } = useContext(UserContext)
+
     useEffect(() => {
-        fetch("http://localhost:3000/contryData")
+        fetch("http://localhost:3000/contry")
             .then(responce => responce.json())
             .then(user => setData(user))
 
 
     }, [])
-
-    
+    console.log(data)
 
     return (
         <>
@@ -24,16 +23,18 @@ function ContryCard() {
 
                     const handleClick = () => {
                         navigate('/private/contry')
-                        setContry(res.contry)  
-                        
+                        setContry(res.country_Name)
+
                     }
                     return <div className='p-2' onClick={handleClick}>
                         <div className="card w-72 bg-base-100 shadow-xl h-[600px]">
                             <div className="card-body">
-                                <h2 className="card-title">Contry : {res.contry}</h2>
-                                <p>Short-Description:{res.shortdes}</p>
+                                <h2 className="card-title">Contry : {res.country_Name
+                                }</h2>
+                                <p>Short-Description:{res.                                    shortdescription
+                                }</p>
                             </div>
-                            <figure><img src={res.img} alt="Shoes" /></figure>
+                            <figure><img src={res.image} alt="Shoes" className='h-44' /></figure>
                         </div>
                     </div>
                 })
