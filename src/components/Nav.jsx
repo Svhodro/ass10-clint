@@ -14,7 +14,7 @@ function Nav() {
   const [loginbtn, setloginbtn] = useState("");
   const [logoutbtn, setlogoutbtn] = useState("");
   const [tooltip, setTooltip] = useState("hello")
-  const [photo, setPhoto] = useState("https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg")
+  const [photo, setPhoto] = useState()
   //theme chaenger
 
   useEffect(() => {

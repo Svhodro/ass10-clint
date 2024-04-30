@@ -29,7 +29,7 @@ const handleSubmit=(e)=>{
   //    totaVisitorsPerYear:totaVisitorsPerYear,
   //   useremail: useremail,
   //   username:username}
-    fetch('http://localhost:3000/insert',{
+    fetch('https://new-server-sigma.vercel.app/insert',{
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'

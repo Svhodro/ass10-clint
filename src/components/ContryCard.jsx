@@ -8,7 +8,7 @@ function ContryCard() {
     const { setContry } = useContext(UserContext)
 
     useEffect(() => {
-        fetch("http://localhost:3000/contry")
+        fetch("https://new-server-sigma.vercel.app/contry")
             .then(responce => responce.json())
             .then(user => setData(user))
 

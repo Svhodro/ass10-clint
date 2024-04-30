@@ -7,7 +7,7 @@ function AllCardTourist() {
     const {tourist,setTourist}=useContext(UserContext)
     const navigate=useNavigate()
     useEffect(() => {
-        fetch("http://localhost:3000/Get")
+        fetch("https://new-server-sigma.vercel.app/Get")
             .then(responce => responce.json())
             .then(user => {
                 setData(user)

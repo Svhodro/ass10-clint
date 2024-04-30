@@ -7,7 +7,7 @@ function Contrydetails() {
   const [data, setData] = useState([])
   const navigate=useNavigate()
   useEffect(() => {
-   fetch("http://localhost:3000/Get")
+   fetch("https://new-server-sigma.vercel.app/Get")
         .then(responce => responce.json())
         .then(user => setData(user))
 
